@@ -7,6 +7,10 @@ function getDetail (id) {
   return get(`restaurants/${id}`)
 }
 
+function createCategory (data) {
+  return post('restaurantCategories', data)
+}
+
 function getRestaurantCategories () {
   return get('restaurantCategories')
 }
@@ -23,4 +27,4 @@ function remove (id) {
   return destroy(`restaurants/${id}`)
 }
 
-export { getAll, getDetail, getRestaurantCategories, create, update, remove }
+export { getAll, getDetail, getRestaurantCategories, create, update, remove, createCategory}
